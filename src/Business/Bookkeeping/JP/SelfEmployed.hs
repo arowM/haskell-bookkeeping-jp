@@ -38,6 +38,7 @@ import Business.Bookkeeping
 
 {- $expences
   経費の支払いに使うヘルパ関数群.
+
 >>> :{
 ppr $ year 2015 $ do
   month 1 $ do
@@ -114,6 +115,7 @@ _経費 name = dateTrans
 
 {- $sales
   売上があった場合に使うヘルパ関数群.
+
 >>> :{
 let
   _ジャパリパーク技術顧問料 :: Month -> Date -> YearTransactions
