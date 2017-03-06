@@ -1,3 +1,14 @@
+{- |
+Module      :  Business.Bookkeeping.JP.Csv
+
+Copyright   :  Kadzuya Okamoto 2017
+License     :  MIT
+
+Stability   :  experimental
+Portability :  unknown
+
+This module exports functions to produce CSV-formatted texts for Japanese people.
+-}
 {-# LANGUAGE NoImplicitPrelude #-}
 
 module Business.Bookkeeping.JP.Csv
@@ -12,6 +23,8 @@ import Data.Text (Text)
 import Data.Time.Format (defaultTimeLocale, formatTime)
 import Prelude hiding (unlines)
 
+{-| Produce CSV-formatted texts from `Transactions` value.
+-}
 fromTransactions :: Transactions -> Text
 fromTransactions =
   unlines . (transactionHeader:) . fmap transactionBody . zip [1..] . runTransactions
