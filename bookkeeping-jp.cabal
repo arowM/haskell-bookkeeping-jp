@@ -17,10 +17,16 @@ cabal-version:       >=1.10
 library
   hs-source-dirs:      src
   exposed-modules:     Business.Bookkeeping.JP.SelfEmployed
+                     , Business.Bookkeeping.JP.Csv
   build-depends:       base >= 4.9 && < 4.10
                      , bookkeeping >= 0.2 && < 0.3
+                     , mono-traversable
+                     , text
+                     , time
   default-language:    Haskell2010
   default-extensions:  OverloadedStrings
+                     , RecordWildCards
+  other-extensions:    NoImplicitPrelude
 
 test-suite bookkeeping-jp-test
   type:                exitcode-stdio-1.0
