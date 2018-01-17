@@ -18,7 +18,7 @@ library
   hs-source-dirs:      src
   exposed-modules:     Business.Bookkeeping.JP.SelfEmployed
                      , Business.Bookkeeping.JP.Csv
-  build-depends:       base >= 4.9 && < 4.10
+  build-depends:       base >= 4.9 && < 5
                      , bookkeeping >= 0.2 && < 0.3
                      , mono-traversable
                      , text
