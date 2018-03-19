@@ -35,7 +35,9 @@ transactionBody (n, Transaction {..}) =
     [ tshow n
     , tshow $ formatTime defaultTimeLocale "%Y/%m/%d" tDay
     , formatText . unCategoryName . cName . unDebitCategory $ tDebit
+    , maybe "" formatText . unCategorySubName . cName . unDebitCategory $ tDebit
     , formatText . unCategoryName . cName . unCreditCategory $ tCredit
+    , maybe "" formatText . unCategorySubName . cName . unCreditCategory $ tCredit
     , formatText . unDescription $ tDescription
     , formatText . unSubDescription $ tSubDescription
     , tshow $ unAmount tAmount
@@ -50,7 +52,9 @@ transactionHeader =
     [ formatText "取引No"
     , formatText "取引日"
     , formatText "借方勘定科目"
+    , formatText "借方補助勘定科目"
     , formatText "貸方勘定科目"
+    , formatText "貸方補助勘定科目"
     , formatText "摘要"
     , formatText "細目"
     , formatText "貸借金額"
