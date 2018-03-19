@@ -1,5 +1,5 @@
 name:                bookkeeping-jp
-version:             0.1.1.1
+version:             0.1.1.2
 synopsis:            Helper functions for Japanese bookkeeping.
 description:
     Helper functions of [bookkeeping module](https://github.com/arowM/haskell-bookkeeping#readme) for Japanese bookkeeping.
